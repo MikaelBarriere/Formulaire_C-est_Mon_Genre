@@ -1,0 +1,11 @@
+#imgPreview {
+    width :200px;
+    height :200px;
+    object-fit: cover;
+}
+@font-face {
+    font-family: "JL";
+    src:url(../fonts/JusticeLeague-25m8.ttf);}
+
+.form-header {font-family: "JL";
+    font-size: 3em;}

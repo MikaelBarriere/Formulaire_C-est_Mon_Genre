@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-dark text-light">
+    
+<div class="container border">
+  <div class="form-container">
+      <div class="row mb-4 border">
+          <div class="col-md-6 text-center border">
+              <img src="img/noimage.png" alt="Photo Preview" class="img-thumbnail"  id="imgPreview" accept="image/png, image/jpg, image/gif, image/jpeg ">
+          </div>
+          <div class="col-md-6 text-center ">
+              <label class="bg-light text-dark border border-3 border-info rounded" for="photoUpload"><span class="p-3">Charger une photo </span><input type="file" class="form-control-file bg-info text-center  " id="photoUpload"></label>
+              
+          </div>
+      </div>
+      <div class="form-header">QUI ETES VOUS ?</div>
+      <form class="">
+          <div class="form-group row  border py-3">
+              <label for="nom" class="col-md-6 col-form-label">Nom : <span id=errorNom class="empty">Champ Vide</span></label>
+              
+              <div class="col-md-6">
+                  <input type="text" class="form-control  w-50 border-3 " id="nom">
+              </div>
+          </div>
+          <div class="form-group row  border py-3">
+              <label for="prenom" class="col-md-6 col-form-label ">Prenom : <span id=errorPrenom class="empty">Champ Vide</span></label>
+              
+              <div class="col-md-6 ">
+                  <input type="text" class="form-control  w-50 border-3 " id="prenom">
+              </div>
+          </div>
+          
+          <div class="form-group row py-3 border ">
+              <label for="dateNaissance" class="col-md-6 col-form-label">Date de naissance : <span id="errorDate" class="empty">Champ Vide </span><span id="notValidDate" class="notValid">Date pas correcte</span></label>
+              <div class="col-md-6">
+                  <input type="text" class="form-control w-50 border-3" id="dateNaissance">
+              </div>
+          </div>
+          <div class="form-group row py-3 border">
+              <label for="email" class="col-md-6 col-form-label">Email : <span id=errorMail class="empty">Champ Vide </span><span class="notValid" id="notValidMail"> Adresse mail non Valide </span></label>
+              
+              <div class="col-md-6">
+                  <input type="email" class="form-control  w-50 border-3" id="email">
+              </div>
+          </div>
+          <div class="form-header">QUEL EST VOTRE GENRE..?</div>
+        
+          <div class=" py-3">
+              <div class="form-check form-check-inline m-6">
+                  <input class="form-check-input" type="radio" name="genre" id="femme" value="femme" data-message='Vousavez fait le choix Femme … Mais vous pourrez le modifier.' checked>
+                  <label class="form-check-label" for="femme">Femme</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="genre" id="homme" value="homme" data-message='Vous avez fait le choix Homme … Mais vous pourrez le modifier.'>
+                  <label class="form-check-label" for="homme">Homme</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="genre" id="martien"  value="martien" data-message='Vous avez fait le choix Martien … Mais vous pourrez le modifier.'>
+                  <label class="form-check-label" for="martien">Martien</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="genre" id="autre" value="autre" data-message='Vous avez fait le choix Autre … Mais vous pourrez le modifier.'>
+                  <label class="form-check-label" for="autre">Autre</label>
+              </div>
+          </div>
+          <div class="form-group row border py-3">
+              <div class="col-md-6">
+                  <button id="btnSubmit" type="submit" class="btn btn-primary btn-block m-1">Confirmer</button>
+              </div>
+              <div class="col-md-6">
+                  <button id="btnReset" type="reset" class="btn btn-danger btn-block m-1">Annuler</button>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+<div class="modal fade" id="confirmationModal"  >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark">
+            <div class="modal-header">
+                <h5 class="modal-title " id="confirmationModalLabel">Confirmation</h5>
+                <button type="button" class=" bg-danger ms-auto border border-danger close">
+                    <span class="text-light">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Confirmez-vous l'envoi des informations ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmSubmit">Confirmer</button>
+                <button type="button" class="btn btn-danger">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </form>
+    
+
+
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
